@@ -3,8 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:interviewmobile/bloc/blog/blog_cubit.dart';
 import 'package:interviewmobile/presentasion/home_screen.dart';
 
-void main() => runApp(MaterialApp(
-        home: BlocProvider(
+void main() => runApp(BlocProvider(
       create: (context) => BlogCubit(),
-      child: const Homepage(),
-    )));
+      child: const MaterialApp(
+        home: Homepage(),
+      ),
+    ));
